@@ -1,0 +1,5 @@
+#!/bin/bash
+
+OUTPUT="$(pactl list short sinks)"
+ARRAY=($OUTPUT)
+echo ${ARRAY[0]}

@@ -1,0 +1,3 @@
+sudo ip link set wlp5s0 up
+sudo wpa_supplicant -B -i wlp5s0 -c ~/execs/scripts/network/wpa.conf
+sudo dhcpcd wlp5s0

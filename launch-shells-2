@@ -1,0 +1,4 @@
+sleep 1.5 &&
+i3-msg split v &&
+sleep 0.5 &&
+sakura & 

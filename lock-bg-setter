@@ -1,0 +1,8 @@
+#!/bin/bash
+
+#IMGFILE="/home/erol/Pictures/wallpapers/arch/$(ls /home/erol/Pictures/wallpapers/arch | shuf -n 1)"
+
+#echo "$IMGFILE"
+#i3lock -ei "$IMGFILE"
+i3lock -ei "/home/erol/Pictures/wallpapers/865098.png"
+

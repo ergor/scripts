@@ -1,0 +1,11 @@
+#!/bin/bash
+
+args=("$@")
+
+if [ "${args[0]}" = "-i" ]; then
+	~/execs/scripts/network/initial-conn
+	sleep 1
+	iw dev wlp5s0 link	
+else
+	echo -e "Use -i to establish initial connection.\n(TODO: add more functionality)"
+fi
