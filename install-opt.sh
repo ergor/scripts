@@ -1,10 +1,17 @@
 #!/bin/bash
 
-# Set all directories to full group perms.
-#1: find . -type d -exec chmod g+rwx {} \;
+install_path="$1"
+
+if [ ! -d "$install_path" ]; then
+    echo supplied argument is not a directory.
+fi
+
+# Set directory and subdirectories to full group perms.
+chmod g+rwx "$install_path"
+find "$install_path" -type d -exec chmod g+rwx {} \;
 
 # Set all user executable files to allow execute for group as well.
-#2: find . -type f -perm -u+x -exec chmod g+x {} \;
+find "$install_path" -type f -perm -u+x -exec chmod g+x {} \;
 
 # Finally change to correct ownership
-#3: chown -R root:users
+sudo chown -R root:users "$install_path"
